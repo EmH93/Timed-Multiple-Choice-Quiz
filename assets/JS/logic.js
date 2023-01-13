@@ -8,6 +8,7 @@
 //Variables from index.html needed for logic:
     var startButton = document.querySelector("#start");
     var timerValue = document.querySelector("#time");
+    var timerDiv = document.querySelector("#timerDiv");
     var startScreen = document.querySelector("#start-screen");
     var questionsScreen = document.querySelector("#questions");
     var endScreen = document.querySelector("#end-screen");
@@ -16,7 +17,7 @@
     var submitScore = document.querySelector("#submit");
     var questionFeedback = document.querySelector("#feedback")
 
-
+    var timeLeft = 60;
 
 //Start button click event.
     startButton.addEventListener("click", function(event){
@@ -30,27 +31,27 @@ insertQuestionOne(questionOne, qOneOne, qOneTwo, qOneThree, qOneFour, correctOne
 
 //Timer countdown.
     function countdownTimer(){
-        var timeLeft = 60;
         var timeInterval = setInterval(function () {
         if (timeLeft > 0){
             timeLeft--;
             timerValue.textContent = timeLeft;
         }
             if(timeLeft === 0){
-                finalPage();
-                clearInterval(timeInterval);
-                localStorage.setItem("user score", timeLeft);
+                questionsScreen.setAttribute("class", "hide");
+                questionFeedback.setAttribute("class", "hide");
+                endScreen.setAttribute("class", "show");
+                timerDiv.setAttribute("class", "hide");
             }
         }, 1000);
     }
 
+    
 
 // Function that brings up score page of quiz.
     function finalPage(){
         questionsScreen.setAttribute("class", "hide");
         questionFeedback.setAttribute("class", "hide");
         endScreen.setAttribute("class", "show");
-        var userScore = localStorage.getItem("user score");
-        console.log(userScore);
-        finalScoreValue.textContent = userScore;
+        localStorage.setItem("user score", (timeLeft + 10));
+        timerDiv.setAttribute("class", "hide");
     }
