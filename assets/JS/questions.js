@@ -110,13 +110,12 @@
             if(liELThree.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
-                timeLeft += 10;
                 return insertQuestionTwo(questionTwo, qTwoOne, qTwoTwo, qTwoThree, qTwoFour, correctTwo);
             }; 
             if (liELThree.innerHTML !== correct) {
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "That's incorrect!"
-                timeLeft -= 0;
+                timeLeft -= 10;
                 return insertQuestionTwo(questionTwo, qTwoOne, qTwoTwo, qTwoThree, qTwoFour, correctTwo);
             }
         });
@@ -124,13 +123,12 @@
             if(liELFour.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
-                timeLeft += 10;
                 return insertQuestionTwo(questionTwo, qTwoOne, qTwoTwo, qTwoThree, qTwoFour, correctTwo);
             }; 
             if (liELFour.innerHTML !== correct) {
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "That's incorrect!"
-                timeLeft -= 0;
+                timeLeft -= 10;
                 return insertQuestionThree(questionThree, qThreeOne, qThreeTwo, qThreeThree, qThreeFour, correctThree);
             }
         });
@@ -146,7 +144,7 @@
             if(liELOne.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
-                timeLeft += 10;
+                //timeLeft += 10;
                 return insertQuestionThree(questionThree, qThreeOne, qThreeTwo, qThreeThree, qThreeFour, correctThree);
             }; 
             if (liELOne.innerHTML !== correct) {
@@ -160,7 +158,7 @@
             if(liELTwo.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
-                timeLeft += 10;
+                //timeLeft += 10;
                 return insertQuestionThree(questionThree, qThreeOne, qThreeTwo, qThreeThree, qThreeFour, correctThree);
             }; 
             if (liELOne.innerHTML !== correct) {
@@ -174,7 +172,7 @@
             if(liELThree.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
-                timeLeft += 10;
+                //timeLeft += 10;
                 return insertQuestionThree(questionThree, qThreeOne, qThreeTwo, qThreeThree, qThreeFour, correctThree);
             }; 
             if (liELOne.innerHTML !== correct) {
@@ -188,7 +186,7 @@
             if(liELFour.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
-                timeLeft += 10;
+                //timeLeft += 10;
                 return insertQuestionThree(questionThree, qThreeOne, qThreeTwo, qThreeThree, qThreeFour, correctThree);
             }; 
             if (liELOne.innerHTML !== correct) {
@@ -211,7 +209,7 @@
             if(liELOne.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
-                timeLeft += 10;
+                //timeLeft += 10;
                 return insertQuestionFour(questionFour, qFourOne, qFourTwo, qFourThree, qFourFour, correctFour);
             }; 
             if (liELOne.innerHTML !== correct) {
@@ -225,7 +223,7 @@
             if(liELTwo.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
-                timeLeft += 10;
+                //timeLeft += 10;
                 return insertQuestionFour(questionFour, qFourOne, qFourTwo, qFourThree, qFourFour, correctFour);
             }; 
             if (liELOne.innerHTML !== correct) {
@@ -239,7 +237,7 @@
             if(liELThree.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
-                timeLeft += 10;
+                //timeLeft += 10;
                 return insertQuestionFour(questionFour, qFourOne, qFourTwo, qFourThree, qFourFour, correctFour);
             }; 
             if (liELOne.innerHTML !== correct) {
@@ -253,7 +251,7 @@
             if(liELFour.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
-                timeLeft += 10;
+                //timeLeft += 10;
                 return insertQuestionFour(questionFour, qFourOne, qFourTwo, qFourThree, qFourFour, correctFour);
             }; 
             if (liELOne.innerHTML !== correct) {
@@ -276,7 +274,7 @@
             if(liELOne.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
-                timeLeft += 10;
+                //timeLeft += 10;
                 return insertQuestionFive(questionFive, qFiveOne, qFiveTwo, qFiveThree, qFiveFour, correctFour);
             } else if (liELOne.innerHTML !== correct){
                 questionFeedback.setAttribute("class", "feedback show");
@@ -289,7 +287,7 @@
             if(liELTwo.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
-                timeLeft += 10;
+                //timeLeft += 10;
                 return insertQuestionFive(questionFive, qFiveOne, qFiveTwo, qFiveThree, qFiveFour, correctFour);
             } else if (liELTwo.innerHTML !== correct){
                 questionFeedback.setAttribute("class", "feedback show");
@@ -302,7 +300,7 @@
             if(liELThree.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
-                timeLeft += 10;
+                //timeLeft += 10;
                 return insertQuestionFive(questionFive, qFiveOne, qFiveTwo, qFiveThree, qFiveFour, correctFour);
             } else if (liELThree.innerHTML !== correct){
                 questionFeedback.setAttribute("class", "feedback show");
@@ -315,7 +313,7 @@
             if(liELFour.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
-                timeLeft += 10;
+                //timeLeft += 10;
                 return insertQuestionFive(questionFive, qFiveOne, qFiveTwo, qFiveThree, qFiveFour, correctFour);
             } else if (liELFour.innerHTML !== correct){
                 questionFeedback.setAttribute("class", "feedback show");
@@ -337,7 +335,7 @@
             if(liELOne.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
-                timeLeft += 20;
+                //timeLeft += 20;
                 return finalPage();
             } else if (liELOne.innerHTML !== correct){
                 questionFeedback.setAttribute("class", "feedback show");
@@ -350,7 +348,7 @@
             if(liELTwo.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
-                timeLeft += 20;
+                //timeLeft += 20;
                 return finalPage();
             } else if (liELTwo.innerHTML !== correct){
                 questionFeedback.setAttribute("class", "feedback show");
@@ -363,7 +361,7 @@
             if(liELThree.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
-                timeLeft += 20;
+                //timeLeft += 20;
                 return finalPage();
             } else if (liELThree.innerHTML !== correct){
                 questionFeedback.setAttribute("class", "feedback show");
@@ -376,7 +374,7 @@
             if(liELFour.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
-                timeLeft += 20;
+                //timeLeft += 30;
                 return finalPage();
             } else if (liELFour.innerHTML !== correct){
                 questionFeedback.setAttribute("class", "feedback show");

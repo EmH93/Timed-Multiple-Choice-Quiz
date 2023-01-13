@@ -11,7 +11,7 @@
     var submitScore = document.querySelector("#submit");
     var questionFeedback = document.querySelector("#feedback")
 
-    var timeLeft = 60;
+    var timeLeft = 
 
 //Start button click event.
     startButton.addEventListener("click", function(event){
@@ -25,6 +25,7 @@ insertQuestionOne(questionOne, qOneOne, qOneTwo, qOneThree, qOneFour, correctOne
 
 //Timer countdown.
     function countdownTimer(){
+        timeLeft = 60;
         var timeInterval = setInterval(function () {
         if (timeLeft > 0){
             timeLeft--;
@@ -35,6 +36,7 @@ insertQuestionOne(questionOne, qOneOne, qOneTwo, qOneThree, qOneFour, correctOne
                 questionFeedback.setAttribute("class", "hide");
                 endScreen.setAttribute("class", "show");
                 timerDiv.setAttribute("class", "hide");
+                localStorage.setItem("poor score", 0);
             }
         }, 1000);
     }
