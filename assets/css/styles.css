@@ -92,6 +92,6 @@ li:nth-child(odd) {
   right: 10px;
 }
 
-#nextDiv {
-
+#answerOption {
+  width: 90%;
 }

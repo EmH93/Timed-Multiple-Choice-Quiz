@@ -68,10 +68,10 @@
         liELTwo.textContent = two;
         liELThree.textContent = three;
         liELFour.textContent = four;
-        liELOne.setAttribute("id", "answerOption1");
-        liELTwo.setAttribute("id", "answerOption2");
-        liELThree.setAttribute("id", "answerOption3");
-        liELFour.setAttribute("id", "answerOption4");
+        liELOne.setAttribute("id", "answerOption");
+        liELTwo.setAttribute("id", "answerOption");
+        liELThree.setAttribute("id", "answerOption");
+        liELFour.setAttribute("id", "answerOption");
     };
 
 //Push question to screen function:
@@ -83,46 +83,52 @@
             if(liELOne.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
+                setTimeout(clearQuestion, 1000);
             } else {
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "That's incorrect!"
+                setTimeout(clearQuestion, 1000);
             }
         });
         liELTwo.addEventListener("click", function(){
             if(liELTwo.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
+                setTimeout(clearQuestion, 1000);
             } else {
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "That's incorrect!"
+                setTimeout(clearQuestion, 1000);
             }
         });
         liELThree.addEventListener("click", function(){
             if(liELThree.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
+                setTimeout(clearQuestion, 1000);
             } else {
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "That's incorrect!"
+                setTimeout(clearQuestion, 1000);
             }
         });
         liELFour.addEventListener("click", function(){
             if(liELFour.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
+                setTimeout(clearQuestion, 1000);
             } else {
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "That's incorrect!"
+                setTimeout(clearQuestion, 1000);
             }
         });
-        var nextButton = document.createElement("button");
+        
     };
 
-//Clear inner html of question once answered
+
+    //Clear inner html of question once answered
     function clearQuestion(){
         answersOrderedList.textContent = "";
         questionText.textContent = "";
     };
-
-//Event listener for each line
-

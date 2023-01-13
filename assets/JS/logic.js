@@ -26,7 +26,13 @@
         questionsScreen.setAttribute("class", "show");
 //Below code testing successful question insert.
         insertQuestion(questionOne, qOneOne, qOneTwo, qOneThree, qOneFour, correctOne);
-    })
+        insertQuestion(questionTwo, qTwoOne, qTwoTwo, qTwoThree, qTwoFour, correctTwo);
+    });
+
+
+
+insertQuestion(questionTwo, qTwoOne, qTwoTwo, qTwoThree, qTwoFour, correctTwo);
+
 
 //Timer countdown.
     function countdownTimer(){
