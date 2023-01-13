@@ -4,6 +4,11 @@
 //For each question, an incorrect choice will remove ten seconds from the timer, and provide incorrect! feedback, and move to the next question.
 //For each question, a correct choice will provide correct! feedback move to the next question.
 
+//Variables from index.html:
+var questionText = document.querySelector("#question-title");
+var answersDiv = document.querySelector("#choices");
+
+
 //Questions
 //Question 1 (correct: Object-Oriented):
 var questionOne = "Fill in the blank: Javascript is an _________ language.";
