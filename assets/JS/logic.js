@@ -3,7 +3,7 @@
 //When start is clicked, the first question will show up.
 //The users final score should be the remaining seconds in the timer when the questions are done.
 //The user can insert their initials into the input field and submit to save their score - validate feedback for no input as well as successful input.
-//users timer score an initials will save to localStorage
+//users timer score anf initials will save to localStorage
 
 //Variables from index.html needed for logic:
     var startButton = document.querySelector("#start");
@@ -25,25 +25,32 @@
         startScreen.setAttribute("class", "hide");
         questionsScreen.setAttribute("class", "show");
 //Below code testing successful question insert.
-        insertQuestion(questionOne, qOneOne, qOneTwo, qOneThree, qOneFour, correctOne);
-        insertQuestion(questionTwo, qTwoOne, qTwoTwo, qTwoThree, qTwoFour, correctTwo);
+insertQuestionOne(questionOne, qOneOne, qOneTwo, qOneThree, qOneFour, correctOne);
     });
-
-
-
-insertQuestion(questionTwo, qTwoOne, qTwoTwo, qTwoThree, qTwoFour, correctTwo);
-
 
 //Timer countdown.
     function countdownTimer(){
         var timeLeft = 60;
         var timeInterval = setInterval(function () {
+        if (timeLeft > 0){
             timeLeft--;
             timerValue.textContent = timeLeft;
-//TODO later insert if else for end of timer
-
+        }
+            if(timeLeft === 0){
+                finalPage();
+                clearInterval(timeInterval);
+                localStorage.setItem("user score", timeLeft);
+            }
         }, 1000);
     }
 
 
-    
+// Function that brings up score page of quiz.
+    function finalPage(){
+        questionsScreen.setAttribute("class", "hide");
+        questionFeedback.setAttribute("class", "hide");
+        endScreen.setAttribute("class", "show");
+        var userScore = localStorage.getItem("user score");
+        console.log(userScore);
+        finalScoreValue.textContent = userScore;
+    }
