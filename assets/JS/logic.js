@@ -22,6 +22,7 @@ var questionFeedback = document.querySelector("#feedback")
 startButton.addEventListener("click", function(event){
     event.preventDefault();
     countdownTimer();
+    startScreen.setAttribute("class", "hide");
 })
 
 //Timer countdown.
