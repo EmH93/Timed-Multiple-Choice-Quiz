@@ -14,3 +14,23 @@ var endScreen = document.querySelector("#end-screen");
 var finalScoreValue = document.querySelector("#final-score");
 var userInitials = document.querySelector("#initials");
 var submitScore = document.querySelector("#submit");
+var questionFeedback = document.querySelector("#feedback")
+
+
+
+//Start button click event.
+startButton.addEventListener("click", function(event){
+    event.preventDefault();
+    countdownTimer();
+})
+
+//Timer countdown.
+function countdownTimer(){
+    var timeLeft = 60;
+    var timeInterval = setInterval(function () {
+        timeLeft--;
+        timerValue.textContent = timeLeft;
+//TODO later insert if else for end of timer
+
+    }, 1000);
+}
