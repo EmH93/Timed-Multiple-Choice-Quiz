@@ -5,27 +5,53 @@
 //For each question, a correct choice will provide correct! feedback move to the next question.
 
 //Variables from index.html:
-var questionText = document.querySelector("#question-title");
-var answersDiv = document.querySelector("#choices");
+    var questionText = document.querySelector("#question-title");
+    var answersDiv = document.querySelector("#choices");
 
+//Ordered List for answers:
+    var answersOrderedList = document.createElement("ol")
+    answersDiv.appendChild(answersOrderedList);
 
 //Questions
-//Question 1 (correct: Object-Oriented):
-var questionOne = "Fill in the blank: Javascript is an _________ language.";
-var answersOne = ['Object-Oriented', 'Object-Based', 'Procedural', 'None of the above'];
+    //Question 1
+    var questionOne = "Fill in the blank: Javascript is an _________ language.";
+    var answersOne = ['Object-Oriented', 'Object-Based', 'Procedural', 'None of the above'];
+    var correctOne = 'Object-Oriented';
 
-//Question 2 (correct: alerts):
-var questionTwo = "Which option below is not a commonly used Javascript data type?";
-var answersTwo = ['Booleans', 'Numbers', 'Alerts', 'Strings'];
+    //Question 2
+    var questionTwo = "Which option below is not a commonly used Javascript data type?";
+    var answersTwo = ['Booleans', 'Numbers', 'Alerts', 'Strings'];
+    var correctTwo = 'Alerts';
 
-//Question 3 (correct: Number):
-var questionThree = "What will be the output of the following code snippet: print(typeof(Nan));";
-var answersThree = ['Object', 'Number', 'String', 'Undefined'];
+    //Question 3
+    var questionThree = "What will be the output of the following code snippet: print(typeof(Nan));";
+    var answersThree = ['Object', 'Number', 'String', 'Undefined'];
+    var correctThree = 'Number';
 
-//Question 4 (correct: Quotation marks):
-var questionFour = "Strings must be surrounded by which of the following options?";
-var answersFour = ['Quotation marks', 'Curly brackets', 'Square brackets', 'Parentheses'];
+    //Question 4
+    var questionFour = "Strings must be surrounded by which of the following options?";
+    var answersFour = ['Quotation marks', 'Curly brackets', 'Square brackets', 'Parentheses'];
+    var correctFour = 'Quotation marks';
 
-//Question 5 (correct: stringify())
-var questionFive = "Which of these functions can be used to serialise an object into a JSON string in Javascript?"
-var answersFive = ['parse()', 'convert()', 'push()', 'stringify()'];
+    //Question 5
+    var questionFive = "Which of these functions can be used to serialise an object into a JSON string in Javascript?"
+    var answersFive = ['parse()', 'convert()', 'push()', 'stringify()'];
+    var correctFive = 'stringify()';
+
+
+//turn answer array into ordered list.
+    function convertAnswers(answersArr){
+        var answersArray = answersArr;
+            for(var i = 0; i < answersArray.length; i++){
+                var liEl = document.createElement("li");
+                answersOrderedList.appendChild(liEl);
+                liEl.textContent = answersArray[i];
+            }
+    }
+
+//Push question to screen function:
+    function insertQuestion(question, answers){
+        questionText.textContent = question;    
+        convertAnswers(answers);
+    }
+

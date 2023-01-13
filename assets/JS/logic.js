@@ -6,32 +6,35 @@
 //users timer score an initials will save to localStorage
 
 //Variables from index.html needed for logic:
-var startButton = document.querySelector("#start");
-var timerValue = document.querySelector("#time");
-var startScreen = document.querySelector("#start-screen");
-var questionsScreen = document.querySelector("#questions");
-var endScreen = document.querySelector("#end-screen");
-var finalScoreValue = document.querySelector("#final-score");
-var userInitials = document.querySelector("#initials");
-var submitScore = document.querySelector("#submit");
-var questionFeedback = document.querySelector("#feedback")
+    var startButton = document.querySelector("#start");
+    var timerValue = document.querySelector("#time");
+    var startScreen = document.querySelector("#start-screen");
+    var questionsScreen = document.querySelector("#questions");
+    var endScreen = document.querySelector("#end-screen");
+    var finalScoreValue = document.querySelector("#final-score");
+    var userInitials = document.querySelector("#initials");
+    var submitScore = document.querySelector("#submit");
+    var questionFeedback = document.querySelector("#feedback")
 
 
 
 //Start button click event.
-startButton.addEventListener("click", function(event){
-    event.preventDefault();
-    countdownTimer();
-    startScreen.setAttribute("class", "hide");
-})
+    startButton.addEventListener("click", function(event){
+        event.preventDefault();
+        countdownTimer();
+        startScreen.setAttribute("class", "hide");
+        questionsScreen.setAttribute("class", "show");
+//Below code testing successful question insert.
+        insertQuestion(questionOne, answersOne);
+    })
 
 //Timer countdown.
-function countdownTimer(){
-    var timeLeft = 60;
-    var timeInterval = setInterval(function () {
-        timeLeft--;
-        timerValue.textContent = timeLeft;
+    function countdownTimer(){
+        var timeLeft = 60;
+        var timeInterval = setInterval(function () {
+            timeLeft--;
+            timerValue.textContent = timeLeft;
 //TODO later insert if else for end of timer
 
-    }, 1000);
-}
+        }, 1000);
+    }
