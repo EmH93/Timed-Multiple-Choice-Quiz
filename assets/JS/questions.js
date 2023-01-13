@@ -110,12 +110,13 @@
             if(liELThree.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
+                timeLeft += 10;
                 return insertQuestionTwo(questionTwo, qTwoOne, qTwoTwo, qTwoThree, qTwoFour, correctTwo);
             }; 
-            if (liELOne.innerHTML !== correct) {
+            if (liELThree.innerHTML !== correct) {
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "That's incorrect!"
-                timeLeft -= 10;
+                timeLeft -= 0;
                 return insertQuestionTwo(questionTwo, qTwoOne, qTwoTwo, qTwoThree, qTwoFour, correctTwo);
             }
         });
@@ -123,13 +124,14 @@
             if(liELFour.innerHTML === correct){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
+                timeLeft += 10;
                 return insertQuestionTwo(questionTwo, qTwoOne, qTwoTwo, qTwoThree, qTwoFour, correctTwo);
             }; 
-            if (liELOne.innerHTML !== correct) {
+            if (liELFour.innerHTML !== correct) {
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "That's incorrect!"
-                timeLeft -= 10;
-                return insertQuestionTwo(questionTwo, qTwoOne, qTwoTwo, qTwoThree, qTwoFour, correctTwo);
+                timeLeft -= 0;
+                return insertQuestionThree(questionThree, qThreeOne, qThreeTwo, qThreeThree, qThreeFour, correctThree);
             }
         });
         

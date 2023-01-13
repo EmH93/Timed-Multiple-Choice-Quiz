@@ -1,9 +1,3 @@
-//When startbutton is clicked, the start button and intro text will be hidden.
-//When start is clicked, the timer will begin.
-//When start is clicked, the first question will show up.
-//The users final score should be the remaining seconds in the timer when the questions are done.
-//The user can insert their initials into the input field and submit to save their score - validate feedback for no input as well as successful input.
-//users timer score anf initials will save to localStorage
 
 //Variables from index.html needed for logic:
     var startButton = document.querySelector("#start");
@@ -45,13 +39,26 @@ insertQuestionOne(questionOne, qOneOne, qOneTwo, qOneThree, qOneFour, correctOne
         }, 1000);
     }
 
-    
-
 // Function that brings up score page of quiz.
     function finalPage(){
         questionsScreen.setAttribute("class", "hide");
         questionFeedback.setAttribute("class", "hide");
         endScreen.setAttribute("class", "show");
-        localStorage.setItem("user score", (timeLeft + 10));
+        localStorage.setItem("user score", timeLeft);
+        finalScoreValue.textContent = localStorage.getItem("user score");
         timerDiv.setAttribute("class", "hide");
+
+        submitScore.addEventListener("click", function(event){
+            event.preventDefault();
+
+            var userInitials = document.querySelector("#initials").value;
+            var finalScoreValue = document.querySelector("#final-score");
+
+            if (userInitials === "") {
+                alert("Error, initials cannot be blank.");
+            } else {
+                alert("Success, score registered successfully");
+            }
+        localStorage.setItem("initials", userInitials);
+        })
     }
