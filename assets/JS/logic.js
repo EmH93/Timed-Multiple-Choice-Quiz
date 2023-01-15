@@ -20,7 +20,6 @@
         countdownTimer();
         startScreen.setAttribute("class", "hide");
         questionsScreen.setAttribute("class", "show");
-//Below code testing successful question insert.
 insertQuestionOne(questionOne, qOneOne, qOneTwo, qOneThree, qOneFour, correctOne);
     });
 
