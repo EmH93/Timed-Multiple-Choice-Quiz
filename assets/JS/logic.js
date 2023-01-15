@@ -11,7 +11,7 @@
     var submitScore = document.querySelector("#submit");
     var questionFeedback = document.querySelector("#feedback")
 
-    var timeLeft = 
+    var timeLeft = 60;
 
 //Start button click event.
     startButton.addEventListener("click", function(event){
@@ -25,7 +25,6 @@ insertQuestionOne(questionOne, qOneOne, qOneTwo, qOneThree, qOneFour, correctOne
 
 //Timer countdown.
     function countdownTimer(){
-        timeLeft = 60;
         var timeInterval = setInterval(function () {
         if (timeLeft > 0){
             timeLeft--;
@@ -63,4 +62,9 @@ insertQuestionOne(questionOne, qOneOne, qOneTwo, qOneThree, qOneFour, correctOne
             }
         localStorage.setItem("initials", userInitials);
         })
+    };
+
+// Function to take 10 seconds off for incorrect answers
+    function  minusTenSeconds(){
+        return timeLeft -= 10;
     }
