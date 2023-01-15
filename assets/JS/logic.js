@@ -63,8 +63,3 @@ insertQuestionOne(questionOne, qOneOne, qOneTwo, qOneThree, qOneFour, correctOne
         localStorage.setItem("initials", userInitials);
         })
     };
-
-// Function to take 10 seconds off for incorrect answers
-    function  minusTenSeconds(){
-        return timeLeft -= 10;
-    }

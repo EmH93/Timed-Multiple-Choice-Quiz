@@ -115,25 +115,22 @@
         liELOne.addEventListener("click", function(){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "That's incorrect!"
-                timeLeft -= 0;
                 return insertQuestionThree(questionThree, qThreeOne, qThreeTwo, qThreeThree, qThreeFour, correctThree);
         });
         liELTwo.addEventListener("click", function(){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "That's incorrect!"
-                timeLeft -= 0;
                 return insertQuestionThree(questionThree, qThreeOne, qThreeTwo, qThreeThree, qThreeFour, correctThree);
         });
         liELThree.addEventListener("click", function(){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
-                //timeLeft += 10;
+                timeLeft += 10;
                 return insertQuestionThree(questionThree, qThreeOne, qThreeTwo, qThreeThree, qThreeFour, correctThree); 
         });
         liELFour.addEventListener("click", function(){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "That's incorrect!"
-                timeLeft -= 0;
                 return insertQuestionThree(questionThree, qThreeOne, qThreeTwo, qThreeThree, qThreeFour, correctThree);
         });
         
@@ -148,25 +145,22 @@
         liELOne.addEventListener("click", function(){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "That's incorrect!"
-                timeLeft -= 0;
                 return insertQuestionFour(questionFour, qFourOne, qFourTwo, qFourThree, qFourFour, correctFour);
         });
         liELTwo.addEventListener("click", function(){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
-                //timeLeft += 10;
+                timeLeft += 10;
                 return insertQuestionFour(questionFour, qFourOne, qFourTwo, qFourThree, qFourFour, correctFour);
         });
         liELThree.addEventListener("click", function(){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "That's incorrect!"
-                timeLeft -= 0;
                 return insertQuestionFour(questionFour, qFourOne, qFourTwo, qFourThree, qFourFour, correctFour);
         });
         liELFour.addEventListener("click", function(){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "That's incorrect!"
-                timeLeft -= 0;
                 return insertQuestionFour(questionFour, qFourOne, qFourTwo, qFourThree, qFourFour, correctFour);
         });
     };
@@ -185,19 +179,16 @@
         liELTwo.addEventListener("click", function(){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "That's incorrect!"
-                timeLeft -= 0;
                 return insertQuestionFive(questionFive, qFiveOne, qFiveTwo, qFiveThree, qFiveFour, correctFour);
         });
         liELThree.addEventListener("click", function(){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "That's incorrect!"
-                timeLeft -= 0;
                 return insertQuestionFive(questionFive, qFiveOne, qFiveTwo, qFiveThree, qFiveFour, correctFour);
         });
         liELFour.addEventListener("click", function(){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "That's incorrect!"
-                timeLeft -= 0;
                 return insertQuestionFive(questionFive, qFiveOne, qFiveTwo, qFiveThree, qFiveFour, correctFour);
         });
     };
@@ -226,6 +217,7 @@
         liELFour.addEventListener("click", function(){
                 questionFeedback.setAttribute("class", "feedback show");
                 questionFeedback.textContent = "Well done, that's correct!"
+                timeLeft += 10;
                 return finalPage();
         }); 
     };
