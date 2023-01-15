@@ -6,6 +6,7 @@
     var startScreen = document.querySelector("#start-screen");
     var questionsScreen = document.querySelector("#questions");
     var endScreen = document.querySelector("#end-screen");
+    var endLose = document.querySelector("#end-screenLose")
     var finalScoreValue = document.querySelector("#final-score");
     var userInitials = document.querySelector("#initials");
     var submitScore = document.querySelector("#submit");
@@ -33,9 +34,8 @@ insertQuestionOne(questionOne, qOneOne, qOneTwo, qOneThree, qOneFour, correctOne
             if(timeLeft === 0){
                 questionsScreen.setAttribute("class", "hide");
                 questionFeedback.setAttribute("class", "hide");
-                endScreen.setAttribute("class", "show");
+                endLose.setAttribute("class", "show");
                 timerDiv.setAttribute("class", "hide");
-                localStorage.setItem("poor score", 0);
             }
         }, 1000);
     }
@@ -53,7 +53,6 @@ insertQuestionOne(questionOne, qOneOne, qOneTwo, qOneThree, qOneFour, correctOne
             event.preventDefault();
 
             var userInitials = document.querySelector("#initials").value;
-            var finalScoreValue = document.querySelector("#final-score");
 
             if (userInitials === "") {
                 alert("Error, initials cannot be blank.");
